@@ -108,7 +108,7 @@ router.get('/', async (req, res) => {
             await delay(1500);
             const pairingCode = await sock.requestPairingCode(phoneNumber, "EDITH123");
             if (!res.headersSent) {
-                return res.send({ code: NABEED12 });
+                return res.send({ code: pairingCode });
             }
         }
     }
